@@ -31,7 +31,7 @@ A specific version of the `terragrunt` CLI can be installed:
 steps:
   - uses: eLco/setup-terragrunt@v1
     with:
-      terragrunt_version: 0.35.7
+      terragrunt_version: 0.54.22
 ```
 
 A specific version of the `terragrunt` CLI can be installed, using personal github token:
@@ -40,7 +40,7 @@ A specific version of the `terragrunt` CLI can be installed, using personal gith
 steps:
   - uses: eLco/setup-terragrunt@v1
     with:
-      terragrunt_version: 0.35.7
+      terragrunt_version: 0.54.22
       github_token: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
 ```
 
