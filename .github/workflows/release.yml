@@ -21,7 +21,7 @@ jobs:
   check-dist:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Set Node.js 20.x
         uses: actions/setup-node@v4
         with:
@@ -39,9 +39,27 @@ jobs:
             exit 1
           fi
         id: diff
+  test:
+    name: Test
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+        terragrunt_version: [ 0.54.21, latest ]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup terragrunt
+        uses: ./
+        with:
+          terragrunt_version: ${{ matrix.terragrunt_version }}
+      - name: Capture terragrunt version installed
+        run: |
+          terragrunt -version
   publish:
     needs:
-      - 'check-dist'
+      - check-dist
+      - test
     runs-on: ubuntu-latest
     permissions:
       contents: write # Needed to create GitHub release
