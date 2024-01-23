@@ -1,12 +1,12 @@
 # setup-terragrunt
 
 <p align="left">
-  <a href="https://github.com/eLco/setup-terragrunt/actions"><img alt="setup-terragrunt status" src="https://github.com/eLco/setup-terragrunt/workflows/Tests/badge.svg"></a>
+  <a href="https://github.com/jbcom/setup-terragrunt/actions"><img alt="setup-terragrunt status" src="https://github.com/jbcom/setup-terragrunt/workflows/Tests/badge.svg"></a>
 </p>
 
 ## About
 
-The `eLco/setup-terragrunt` action is a JavaScript action that sets up [Terragrunt CLI](https://terragrunt.gruntwork.io/docs/getting-started/quick-start/) in your GitHub Actions workflow by:
+The `jbcom/setup-terragrunt` action is a JavaScript action that sets up [Terragrunt CLI](https://terragrunt.gruntwork.io/docs/getting-started/quick-start/) in your GitHub Actions workflow by:
 
 - Downloading a specific version of Terragrunt CLI and adding it to the `PATH`.
 
@@ -22,14 +22,14 @@ Setup the `terragrunt` CLI, using latest version:
 
 ```yaml
 steps:
-  - uses: eLco/setup-terragrunt@v1
+  - uses: jbcom/setup-terragrunt@v1
 ```
 
 A specific version of the `terragrunt` CLI can be installed:
 
 ```yaml
 steps:
-  - uses: eLco/setup-terragrunt@v1
+  - uses: jbcom/setup-terragrunt@v1
     with:
       terragrunt_version: 0.35.7
 ```
@@ -38,7 +38,7 @@ A specific version of the `terragrunt` CLI can be installed, using personal gith
 
 ```yaml
 steps:
-  - uses: eLco/setup-terragrunt@v1
+  - uses: jbcom/setup-terragrunt@v1
     with:
       terragrunt_version: 0.35.7
       github_token: ${{ secrets.PERSONAL_GITHUB_TOKEN }}

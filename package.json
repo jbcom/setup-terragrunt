@@ -1,6 +1,6 @@
 {
   "name": "setup-terragrunt",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Setup Terragrunt CLI for GitHub Actions",
   "main": "index.js",
   "scripts": {
@@ -10,21 +10,22 @@
     "all": "npm run lint && npm run prepare && npm run test"
   },
   "keywords": [],
-  "homepage": "https://github.com/eLco/setup-terragrunt",
+  "homepage": "https://github.com/jbcom/setup-terragrunt",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eLco/setup-terragrunt.git"
+    "url": "git+https://github.com/jbcom/setup-terragrunt.git"
   },
   "dependencies": {
-    "@actions/core": "^1.9.0",
-    "@actions/exec": "^1.1.1",
-    "@actions/tool-cache": "^2.0.1",
-    "@octokit/rest": "^19.0.3"
+    "@actions/core": "latest",
+    "@actions/exec": "latest",
+    "@actions/tool-cache": "latest",
+    "@octokit/rest": "latest"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.34.0",
-    "eslint": "^8.0.0",
-    "jest": "^28.1.3"
+    "@commitlint/cli": "latest",
+    "@vercel/ncc": "latest",
+    "eslint": "latest",
+    "jest": "latest"
   }
 }
